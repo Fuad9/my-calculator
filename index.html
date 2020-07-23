@@ -47,7 +47,7 @@
         function updateNum(id, addedNum) {
             const current = document.getElementById(id).innerText;
             const currentNumber = parseFloat(current);
-            totalNum = addedNum * currentNumber;
+            totalNum = addedNum + currentNumber;
             document.getElementById(id).innerText = totalNum;
         }
     </script>
