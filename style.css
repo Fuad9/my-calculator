@@ -1,0 +1,23 @@
+body {
+    padding: 100px;
+}
+
+.container {
+    width: 1000px;
+    height: 500px;
+    background-color: aqua;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px gray;
+}
+
+.input-area {
+    padding: 100px;
+}
+
+.result-display {
+    width: 50%;
+    margin: 0 auto;
+    border: 2px solid red;
+    border-radius: 10px;
+    text-align: center;
+}

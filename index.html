@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My own bank</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <h1 class="text-center">A simple calculator made by javascript</h1>
+
+    <div class="container">
+        <div class="input-area">
+            <input id="numInput" class="form-control" type="number" placeholder="enter a number"><br>
+            <button id="addNum" class="btn btn-success">Click!</button>
+        </div>
+        <div class="result-display">
+            <h2>Result:</h2>
+            <h4><span id="currentNum">0</span></h4>
+        </div>
+    </div>
+
+
+    <script>
+        document.getElementById("addNum").addEventListener("click", function() {
+            const numInput = document.getElementById("numInput").value;
+            const getResult = parseFloat(numInput);
+
+            updateNum("currentNum", getResult);
+            getInputNumber("currentNum");
+
+            document.getElementById("numInput").value = "";
+        })
+
+        function getInputNumber(id) {
+            const amount = document.getElementById(id).value;
+            const amountNumber = parseFloat(amount);
+            return amountNumber;
+        }
+
+
+
+        function updateNum(id, addedNum) {
+            const current = document.getElementById(id).innerText;
+            const currentNumber = parseFloat(current);
+            totalNum = addedNum * currentNumber;
+            document.getElementById(id).innerText = totalNum;
+        }
+    </script>
+
+
+
+
+
+</body>
+
+</html>
